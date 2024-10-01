@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="yaew.jpeg" type="image/jpeg">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>Ian Chester Bufete</p>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <img src="crescent-moon-svgrepo-com.png" id="theme-icon" alt="Theme Icon">
+            </button>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="profile-section">
+                <div class="home-text fade-in-delay">
+                    <h3>Hello, I'm</h3>
+                    <h1 class="typing-text fade-in">Ian Chester Bufete</h1>
+                    <h5 class="fade-in">Web Developer, Web Designer</h5>
+                    <p class="fade-in">How can I help you?</p>
+                    <div class="button-container fade-in">
+                        <a href="Bufete_CV.pdf" download="Bufete_CV.pdf">
+                            <button class="download-btn">CV</button>
+                        </a>
+                        <a href="your-target-page.html">
+                            <button class="redirect-btn">Go to Another Page</button>
+                        </a>
+                    </div>
+                </div>
+                <img src="girl.jpg" alt="Ian Chester Bufete" class="profile-image fade-in">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            // Check for saved user preference in localStorage
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+                themeIcon.src = currentTheme === 'dark' ? 'sun-icon.png' : 'crescent-moon-svgrepo-com.png';
+            }
+
+            toggleButton.addEventListener('click', () => {
+                // Toggle the dark mode class
+                document.body.classList.toggle('dark-mode');
+
+                // Update localStorage based on the current mode
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+
+                // Change icon based on the current mode
+                themeIcon.src = isDarkMode ? 'sun-icon.png' : 'crescent-moon-svgrepo-com.png';
+            });
+        });
+
+        window.onload = function () {
+            // Add fade-in class to elements after the page loads
+            document.querySelectorAll('.fade-in, .fade-in-delay').forEach(function (element) {
+                element.classList.add('fade-in');
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>

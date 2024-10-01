@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, Georgia, Verdana;
+}
+
+/* Header Styling */
+header {
+    padding: 10px 20px; /* Some padding for spacing */
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between; /* Align text and logo */
+    align-items: center; /* Vertically center content */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    background-color: #66B4D6;; /* Background color for navbar */
+    z-index: 1000; /* Ensure it is above other content */
+    padding: 10px 20px; /* Some padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+/* Name Styling */
+nav p {
+    color: black; /* Black text for contrast */
+    font-size: 24px; /* Prominent font size */
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    font-weight: bold; /* Make the name bold */
+}
+
+/* Logo (Image) Styling */
+nav button {
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+nav img {
+    width: 40px;
+    height: auto;
+    margin-right: 60px; /* Adjusted to save space */
+}
+
+/* For better responsiveness */
+@media (max-width: 768px) {
+    nav p {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+    nav img {
+        width: 30px; /* Adjust logo size for smaller screens */
+        margin-right: 30px; /* Adjust margin for smaller screens */
+    }
+}
+
+/* Centering Content with Flexbox */
+.home {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Spacing below text */
+}
+
+/* Additional styling for text */
+h1, h3, h5, p {
+    margin-bottom: 10px; /* Reduced bottom margin */
+    color: #333; /* Adjust colors as needed */
+}
+
+h1 {
+    font-size: 2.2rem; /* Slightly reduced font size */
+}
+
+h3 {
+    font-size: 1.4rem; /* Adjusted for compactness */
+}
+
+h5 {
+    font-size: 1.1rem; /* Adjusted for compactness */
+}
+
+/* Adjust for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Reduced font size */
+    }
+    h3 {
+        font-size: 1.1rem; /* Reduced font size */
+    }
+    h5 {
+        font-size: 0.9rem; /* Reduced font size */
+    }
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Further reduced font size */
+    }
+    h3 {
+        font-size: 1rem; /* Further reduced font size */
+    }
+    h5 {
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+}
+
+/* Button Styles */
+.button-container {
+    margin-top: 10px; /* Reduced space between text and buttons */
+    display: flex;
+    justify-content: center; /* Center buttons */
+}
+
+.download-btn, .redirect-btn {
+    background-color: #66B4D6;
+    color: black;
+    padding: 12px 24px; /* Increased padding for a larger button size */
+    margin-right: 10px; /* Space between buttons */
+    border: none;
+    border-radius: 20px; /* Increased border radius for rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Slightly larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+}
+
+.download-btn:hover, .redirect-btn:hover {
+    background-color: #007BFF; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+a {
+    text-decoration: none;
+}
+
+.profile-section {
+    display: flex; /* Align text and image side by side */
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center the entire section */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 250px; /* Reduced image size */
+    height: 250px; /* Reduced image size */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    border: 5px solid #007BFF; /* Border around the image */
+    margin-left: 20px; /* Reduced space between text and image */
+}
+
+/* Responsive profile image */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 150px; /* Smaller image for mobile */
+        height: 150px; /* Smaller image for mobile */
+    }
+}
+
+/* Dark Mode Styles */
+body {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+.dark-mode nav p {
+    color: white; /* White text for the name in dark mode */
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e; /* Dark footer background in dark mode */
+}
+
+/* Adjust button colors for dark mode */
+.dark-mode .download-btn, .dark-mode .redirect-btn {
+    background-color: #007BFF; /* Change button background for dark mode */
+    color: white; /* White text color for buttons in dark mode */
+}
+
+.dark-mode .download-btn:hover, .dark-mode .redirect-btn:hover {
+    background-color: #66B4D6; /* Change hover color for buttons in dark mode */
+}
+
+/* Dark Mode Styles */
+.dark-mode .home-content h1, 
+.dark-mode .home-content h3, 
+.dark-mode .home-content h5, 
+.dark-mode .home-content p {
+    color: white; /* White text for dark mode */
+}
+
+.dark-mode nav img {
+    filter: brightness(0) invert(1); /* Make the icon white in dark mode */
+}
+
+/* Additional styling for dark mode */
+.dark-mode nav {
+    background-color: #1e1e1e; /* Dark background for navbar in dark mode */
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards; /* Fade in effect */
+}
+
+.fade-in-delay {
+    animation: fadeIn 0.8s ease forwards; /* Fade in effect with delay */
+    animation-delay: 0.5s; /* Delay for text */
+}
